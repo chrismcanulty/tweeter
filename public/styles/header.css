@@ -1,0 +1,11 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+  padding-top: 120px;
+  flex-direction: column;
+  height: 520px;
+  background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
+  background-color: #66452f;
+}

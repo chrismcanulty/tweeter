@@ -13,7 +13,6 @@ $(document).ready(function() {
     console.log(counter);
     const maxChar = 140;
     // once located, modify value displayed by counter, decreasing by 1 for each input character
-
     let inputChars = tweetBox.val().length;
     // Running total of remaining characters: maxChar - inputChars
     let remChars = maxChar - inputChars;

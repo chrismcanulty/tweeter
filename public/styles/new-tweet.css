@@ -8,6 +8,11 @@
 
 .counter {
   font-family: Bungee;
+  /* add css to change color of counter if characters are less than 0 */
+}
+
+.color-red {
+  color: red;
 }
 
 .tweet-line {

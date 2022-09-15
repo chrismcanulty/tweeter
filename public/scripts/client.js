@@ -16,6 +16,8 @@
 // Create relative date/time formatter.
 // const timeAgo = new TimeAgo('en-US')
 
+
+
 $(document).ready(function() {
 
 
@@ -45,6 +47,7 @@ $(document).ready(function() {
 // ]
 
 const createTweetElement = (tweet) => {
+  const ago = timeago.format(tweet.created_at);
   let $tweet =
      $(`
     <article>
@@ -54,7 +57,7 @@ const createTweetElement = (tweet) => {
     </header>
     <p>${tweet.content.text}</p>
     <footer>
-      <div>${tweet.created_at}</div>
+      <div>${ago}</div>
       <span>
         <i class="fa-solid fa-flag"></i>
         <i class="fa-solid fa-retweet"></i>

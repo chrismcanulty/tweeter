@@ -7,8 +7,11 @@ const express       = require("express");
 const bodyParser    = require("body-parser");
 const app           = express();
 
+
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
+app.use(express.urlencoded({extended: false}));
 
 // The in-memory database of tweets. It's a basic object with an array in it.
 const db = require("./lib/in-memory-db");
@@ -31,6 +34,15 @@ const tweetsRoutes = require("./routes/tweets")(DataHelpers);
 
 // Mount the tweets routes at the "/tweets" path prefix:
 app.use("/tweets", tweetsRoutes);
+
+app.get('/tweets', (req, res) => {
+  res.json(data);
+});
+
+app.post('/tweets', (req, res) => {
+  const text = req.body.text;
+
+});
 
 // input, keyup, keypress, and keydown
 

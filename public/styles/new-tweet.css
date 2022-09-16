@@ -1,3 +1,4 @@
+/* Style tweet submission button, counter*/
 .tweet-button {
   font-family: Bungee;
   background-color: #4056A1;
@@ -8,7 +9,6 @@
 
 .counter {
   font-family: Bungee;
-  /* add css to change color of counter if characters are less than 0 */
 }
 
 .color-red {
@@ -50,13 +50,11 @@
   padding-bottom: 100px;
 }
 
+/* Tweet box format */
 .tweets article {
   border:rgb(83, 81, 81) 3px solid;
   height: 150 px;
-  padding-top: 25px;
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-bottom: 25px;
+  padding: 5%;
   margin-bottom: 30px;
 }
 
@@ -86,6 +84,7 @@
   color: #4056A1
 }
 
+/* Change colour of icons upon hover */
 .tweets .fa-solid:hover {
   color: orange;
 }
@@ -93,4 +92,27 @@
 .tweets p {
   font-weight: 400;
   padding-top: 30px;
+}
+
+/* Error messages, only set to appear if invalid tweet input is submitted */
+
+#err1 {
+  display: none;
+  margin-bottom: 15px;
+  justify-content: center;
+  outline: 3px solid red;
+  color: red
+}
+
+#err2 {
+  display: none;
+  justify-content: center;
+  margin-bottom: 15px;
+  outline: 3px solid red;
+  color: red
+}
+
+.error-div {
+  display: flex;
+  flex-direction: column;
 }

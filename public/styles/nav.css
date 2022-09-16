@@ -1,7 +1,8 @@
 nav {
   display: flex;
   color: #FFFFFF;
-  background-color: #4056A1;
+  background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
+  background-color: #66452f;
   font-family: Bungee;
   height: 120px;
   padding-left: 1.5em;

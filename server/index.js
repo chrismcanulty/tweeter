@@ -41,7 +41,6 @@ app.get('/tweets', (req, res) => {
 
 app.post('/tweets', (req, res) => {
   const text = req.body.text;
-
 });
 
 // input, keyup, keypress, and keydown

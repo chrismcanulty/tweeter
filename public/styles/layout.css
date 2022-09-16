@@ -19,7 +19,7 @@ body {
   font-size: 24px;
   /* first item in font-family is target font, second is the backup font */
   font-family: 'Source Sans Pro', sans-serif;
-  background-color:antiquewhite
+  background-color:antiquewhite;
 }
 
 /*
@@ -33,4 +33,26 @@ body {
   margin-right: 5%;
   color: black;
 
+}
+
+/* Define modified css to trigger for desktop devices */
+
+@media screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: row;
+  }
+  .container {
+    margin: 5%;
+    margin-top: 15%;
+  }
+  #main-header {
+    width: 30%;
+    margin-top: 230px;
+    margin-left: 50px;
+  }
+  .nav-bar {
+    background-color: #4056A1;
+    background-image: none;
+  }
 }

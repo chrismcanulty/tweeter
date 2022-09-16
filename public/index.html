@@ -3,7 +3,7 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
 
@@ -11,8 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
 
-    <!-- font-family: 'Bungee', cursive;
-    font-family: 'Source Sans Pro', sans-serif; -->
+    <!-- font-family: 'Bungee', cursive;-->
 
     <!-- import font awesome library-->
 
@@ -41,7 +40,7 @@
   <body>
 
     <!-- Top nav bar (fixed) -->
-    <nav>
+    <nav class="nav-bar">
       <div>
       <span class="page-name">tweeter</span>
       </div>
@@ -58,37 +57,35 @@
       <div>
           <h2 style="font-weight: normal"><b>Amy</b> Mansell</h2>
       </div>
-  </header>
+    </header>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <!-- Tweet form -->
       <section class="new-tweet">
-        <!-- <h2>Compose Tweet</h2> -->
         <form class="form-inline" action="/tweets" method="POST">
           <label class="tweet-line" for="tweet-text"></label>
-          <textarea name="text" class="tweet-text" placeholder="What are you humming about?"></textarea>
-          <div class="button-counter">
-            <button class="tweet-button" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+          <div class="error-div">
+            <!-- Error messages -->
+            <span id="err1" class="errormessage">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+              Error: Please input text into your tweet
+              <i class="fa-solid fa-triangle-exclamation"></i></span>
+            <span id="err2" class="errormessage">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+              Error: 140 character limit exceeded, please reduce tweet characters
+              <i class="fa-solid fa-triangle-exclamation"></i></span>
           </div>
+            <textarea name="text" class="tweet-text" placeholder="What are you humming about?"></textarea>
+            <!-- Class for button and character counter -->
+            <div class="button-counter">
+              <button class="tweet-button" type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
         </form>
       </section>
+      <!-- Section for tweets to populate -->
       <section class="tweets">
-        <article>
-          <header>
-            <div><i class="fa-solid fa-paw"></i> Rhoda Jacobs</div>
-            <span>@MsJacobs</span>
-          </header>
-          <p>Tweet</p>
-          <footer>
-            <div>10 days ago</div>
-            <span>
-              <i class="fa-solid fa-flag"></i>
-              <i class="fa-solid fa-retweet"></i>
-              <i class="fa-solid fa-heart"></i>
-            </span>
-          </footer>
-        </article>
       </section>
     </main>
   </body>

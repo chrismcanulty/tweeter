@@ -29,7 +29,6 @@
   padding-top: 15px;
   display: flex;
   justify-content: space-between
-
 }
 
 .tweet-text {
@@ -40,6 +39,7 @@
   resize: none;
   outline: none;
   overflow: hidden;
+  word-wrap: break-word;
 }
 
 .form-inline {
@@ -48,11 +48,12 @@
 
 .tweets {
   padding-bottom: 100px;
+  word-wrap: break-word;
 }
 
 /* Tweet box format */
 .tweets article {
-  border:rgb(83, 81, 81) 3px solid;
+  border: rgb(83, 81, 81) 3px solid;
   height: 150 px;
   padding: 5%;
   margin-bottom: 30px;
@@ -69,7 +70,7 @@
 }
 
 .tweets header span {
-  color:rgb(147, 142, 142)
+  color: rgb(147, 142, 142)
 }
 
 .tweets footer {

@@ -8,7 +8,7 @@
 $(document).ready(function() {
 
   const createTweetElement = (tweet) => {
-  // define variable to format date created for each tweet
+    // define variable to format date created for each tweet
     const ago = timeago.format(tweet.created_at);
     // define and escape function to prevent contents of tweet form being used to hack our app
     const escape = function(str) {
@@ -61,7 +61,9 @@ $(document).ready(function() {
     const $trimText = $.trim($text.val());
     if ($trimText === "") {
       const $elem = $('#err1');
+      const $error2 = $('#err2');
       // Slow slidedown feature if error is thrown
+      $error2.slideUp();
       $elem.slideDown("slow");
       return;
     }
@@ -71,6 +73,8 @@ $(document).ready(function() {
     const $tweetChars = $text.val();
     if ($tweetChars.length > $maxChar) {
       const $elem = $('#err2');
+      const $error1 = $('#err1');
+      $error1.slideUp();
       $elem.slideDown("slow");
       return;
     }
@@ -81,6 +85,7 @@ $(document).ready(function() {
       $error1.slideUp();
       $error2.slideUp();
       loadTweets();
+      $('.tweet-text').val('');
     });
   });
 

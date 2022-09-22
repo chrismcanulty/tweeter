@@ -1,8 +1,5 @@
-
-// document.getElementsByClassName("tweet-text");
-
 // ensure document is loaded prior to running below code
-$(document).ready(function() {
+const charCounter = $(document).ready(() => {
   const tweetBox = $('.tweet-text');
   // listen for user input in the form
   tweetBox[0].addEventListener("input", function() {
@@ -24,3 +21,5 @@ $(document).ready(function() {
     }
   });
 });
+
+module.exports = { charCounter }

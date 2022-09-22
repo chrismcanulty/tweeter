@@ -85,7 +85,10 @@ $(document).ready(function() {
       $error1.slideUp();
       $error2.slideUp();
       loadTweets();
-      $('.tweet-text').val('');
+      $text.val('');
+      // reset counter
+      const counter = (($form.children('div')).children('.counter'));
+      counter.val($maxChar);
     });
   });
 
